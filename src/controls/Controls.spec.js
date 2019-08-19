@@ -2,7 +2,7 @@ import React from 'react'
 import { render, fireEvent } from '@testing-library/react'
 import 'jest-dom/extend-expect'
 import renderer from 'react-test-renderer'
-import Controls from './Controls'/
+import Controls from './Controls'
 
 describe('<Control />', () => {
 ///snapshot of component
