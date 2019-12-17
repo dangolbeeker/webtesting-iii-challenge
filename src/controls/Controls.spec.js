@@ -5,7 +5,7 @@ import renderer from 'react-test-renderer'
 import Controls from './Controls'
 
 describe('<Control />', () => {
-///snapshot of component
+
     it('matches snapshot', () => {
         const tree = renderer.create(<Controls />); // generates a DOM tree
     
@@ -37,9 +37,8 @@ describe('<Control />', () => {
     
     //toggleClosed to change on btn click
     it(' should toggleClosed change on btn click', ()=>{///mocking
-        const toggleClosed = jest.fn();////toggleClosed is my mock in this case
-        const { getByText } = render(<Controls toggleClosed={toggleClosed}/>) ///passing toggleClose as a prop to my Controls component
-        //testing wise
+        const toggleClosed = jest.fn();
+        const { getByText } = render(<Controls toggleClosed={toggleClosed}/>) 
         const btn = getByText(/close gate/i)
         fireEvent.click(btn)
         expect(toggleClosed).toBeCalledTimes(1)

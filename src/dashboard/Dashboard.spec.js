@@ -5,11 +5,11 @@ import Dashboard from './Dashboard'
 
 describe('<Dashboard />', () => {
 
-    ///snapshot of component
+    
     it('matches snapshot', () => {
         const tree = renderer.create(<Dashboard />); // generates a DOM tree
     
-        // snapshots are a JSON representation of the DOM tree
+        
         expect(tree.toJSON()).toMatchSnapshot();
       }); 
 
